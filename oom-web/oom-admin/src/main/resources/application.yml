@@ -1,9 +1,9 @@
 eureka:
   client:
-    serviceUrl: #注册中心的注册地址
-      defaultZone: http://127.0.0.1:8081/eureka/
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
 spring:
   application:
-    name: oom-admin #服务名称
+    name: oom-admin-dty #服务名称
 server:
   port: 8089 #端口号

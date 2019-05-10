@@ -2,7 +2,7 @@
 eureka:
   client:
     serviceUrl: #注册中心的注册地址
-      defaultZone: http://127.0.0.1:8081/eureka/
+      defaultZone: http://127.0.0.1:8761/eureka/
 spring:
   application:
     name: oom-api #服务名称

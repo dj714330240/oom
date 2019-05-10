@@ -1,5 +1,6 @@
 package com.coe.oom;
 
+import com.coe.oom.listen.ApplicationStartupListen;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
@@ -16,7 +17,11 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 public class OomRegisterApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(OomRegisterApplication.class, args);
+        SpringApplication springApplication = new SpringApplication(OomRegisterApplication .class);
+        /*************启动跳转浏览器---监听---开发环境使用---不用可以注释掉*****************/
+        springApplication.addListeners(new ApplicationStartupListen());
+        /******************************************************************************/
+        springApplication.run(args);
     }
 
 }

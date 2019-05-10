@@ -1,6 +1,9 @@
 server:
   port: 8761 #服务注册中心端口号
 eureka:
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 20000
   instance:
     hostname: 127.0.0.1 #服务注册中心IP地址
   client:
