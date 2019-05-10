@@ -1,4 +1,4 @@
-package com.coe.oom.register;
+package com.coe.oom;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

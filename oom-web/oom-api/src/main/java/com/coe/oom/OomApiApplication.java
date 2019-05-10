@@ -1,13 +1,13 @@
-package com.coe.oom.client;
+package com.coe.oom;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class OomClientApplication {
+public class OomApiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(OomClientApplication.class, args);
+        SpringApplication.run(OomApiApplication.class, args);
     }
 
 }

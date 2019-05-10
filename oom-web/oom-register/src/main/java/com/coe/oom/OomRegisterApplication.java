@@ -1,4 +1,4 @@
-package com.coe.oom.register;
+package com.coe.oom;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

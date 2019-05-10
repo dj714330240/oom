@@ -1,4 +1,4 @@
-package com.coe.oom.client;
+package com.coe.oom;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
