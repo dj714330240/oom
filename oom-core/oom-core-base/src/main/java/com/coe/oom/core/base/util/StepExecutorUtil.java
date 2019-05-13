@@ -1,6 +1,5 @@
-package com.coe.oom.util;
+package com.coe.oom.core.base.util;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,13 +11,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class StepExecutorUtil implements Runnable {
 
-    //配置的域名
-    @Value("${eureka.instance.hostname}")
-    private String host;
-
-    //配置的端口
-    @Value("${server.port}")
-    private String port;
+    //跳转路径
+    private String url;
 
     @Override
     public void run() {
@@ -31,13 +25,20 @@ public class StepExecutorUtil implements Runnable {
         try {
             String os = System.getProperty("os.name");
             if(os.toLowerCase().startsWith("win")){
-                Runtime.getRuntime().exec("cmd /c start http://"+host+":"+port);
+                Runtime.getRuntime().exec("cmd /c start "+url);
             }else if (os.toLowerCase().startsWith("mac")){
-                Runtime.getRuntime().exec("open http://"+host+":"+port);
+                Runtime.getRuntime().exec("open "+url);
             }
         } catch (Exception ex) {
             ex.printStackTrace();
         }
     }
 
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
 }

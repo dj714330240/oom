@@ -1,6 +1,6 @@
-package com.coe.oom.listen;
+package com.coe.oom.core.base.listen;
 
-import com.coe.oom.util.StepExecutorUtil;
+import com.coe.oom.core.base.util.StepExecutorUtil;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
@@ -12,11 +12,21 @@ import org.springframework.context.event.ContextRefreshedEvent;
  * @create: 2019-05-10 11:26
  **/
 public class ApplicationStartupListen implements ApplicationListener<ContextRefreshedEvent> {
+
+    private String url;
+
+    public  ApplicationStartupListen(String url){
+        this.url=url;
+    }
+
     @Override
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
         ApplicationContext ac = contextRefreshedEvent.getApplicationContext();
-        StepExecutorUtil StepExecutorUtil = ac.getBean(StepExecutorUtil.class);
-        Thread thread = new Thread(StepExecutorUtil);
+        StepExecutorUtil stepExecutorUtil = ac.getBean(StepExecutorUtil.class);
+        stepExecutorUtil.setUrl(url);
+        Thread thread = new Thread(stepExecutorUtil);
         thread.start();
     }
+
+
 }
