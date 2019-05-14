@@ -8,4 +8,12 @@ oom-service-user提供者
 
 oom-service-user-provide抽象接口-暴露userService的方法给消费者使用
 
+http://127.0.0.1:8761/   注册中心
+
+
+http://127.0.0.1:8089/user/getUserByCode?userCode=ZSM2 （admin）消费者>调取抽象接口的方法
+
+
+http://127.0.0.1:8099/user/getUserByCode?userCode=ZSM2  UserService的实现
+
 
