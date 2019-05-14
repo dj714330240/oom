@@ -13,6 +13,7 @@ http://127.0.0.1:8761/   注册中心
 
 http://127.0.0.1:8089/user/getUserByCode?userCode=ZSM2 （admin）消费者>调取抽象接口的方法
 
+（简单看下代码，可以了解一下他们是怎么实现调用的）
 
 http://127.0.0.1:8099/user/getUserByCode?userCode=ZSM2  UserService的实现
 
