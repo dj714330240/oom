@@ -7,11 +7,13 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-/**
- * 绑定数据源
- * @author lqg
- *
- */
+/*** 
+ * @Description: 绑定数据源 
+ * @Param:  
+ * @return:  
+ * @Author: 邓太阳 
+ * @Date: 2019-05-13 18:14
+ */ 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 public @interface BindDatasource {

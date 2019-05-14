@@ -18,8 +18,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
+/*** 
+ * @Description: Mybatis 配置
+ * @Param:  
+ * @return:  
+ * @Author: 邓太阳 
+ * @Date: 2019-05-13 18:14
+ */ 
 @Configuration // 该注解类似于spring配置文件
-@MapperScan(basePackages = "com.coe.oom.**.dao.proxydao")
+@MapperScan(basePackages = "com.coe.oom.**.mapper")
 public class MyBatisConfig {
 
     @Autowired
@@ -31,20 +38,20 @@ public class MyBatisConfig {
     @Bean
     public DataSource readDbDataSource() throws Exception {
         Properties props = new Properties();
-        props.put("driverClassName", env.getProperty("spring.datasource.read.driverClassName"));
-        props.put("url", env.getProperty("spring.datasource.read.url"));
-        props.put("username", env.getProperty("spring.datasource.read.username"));
-        props.put("password", env.getProperty("spring.datasource.read.password"));
+        props.put("driverClassName", "com.mysql.jdbc.Driver");
+        props.put("url", "jdbc:mysql://192.168.80.12:3306/fcs_write?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&autoReconnect=true");
+        props.put("username", "kwikto");
+        props.put("password", "gcb123456");
         return DruidDataSourceFactory.createDataSource(props);
     }
 
     @Bean
     public DataSource writeDbDataSource() throws Exception {
         Properties props = new Properties();
-        props.put("driverClassName", env.getProperty("spring.datasource.write.driverClassName"));
-        props.put("url", env.getProperty("spring.datasource.write.url"));
-        props.put("username", env.getProperty("spring.datasource.write.username"));
-        props.put("password", env.getProperty("spring.datasource.write.password"));
+        props.put("driverClassName", "com.mysql.jdbc.Driver");
+        props.put("url", "jdbc:mysql://192.168.80.12:3306/fcs_write?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC&autoReconnect=true");
+        props.put("username", "kwikto");
+        props.put("password", "gcb123456");
         return DruidDataSourceFactory.createDataSource(props);
     }
 
@@ -80,7 +87,7 @@ public class MyBatisConfig {
        // fb.setTypeAliasesPackage(env.getProperty("mybatis.typeAliasesPackage"));// 指定基包
         //fb.setTypeAliasesPackage("com.coe.wo.entity");
         fb.setMapperLocations(
-                new PathMatchingResourcePatternResolver().getResources(env.getProperty("mybatis.mapperLocations")));//
+                new PathMatchingResourcePatternResolver().getResources("classpath:*/xml/**/*.xml"));//
 
         return fb.getObject();
     }

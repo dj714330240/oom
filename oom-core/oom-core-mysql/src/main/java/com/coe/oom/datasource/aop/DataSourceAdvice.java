@@ -11,11 +11,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
-/**
- * 切换数据源切面
- * @author lqg
- *
- */
+/*** 
+ * @Description: 切换数据源切面 
+ * @Param:  
+ * @return:  
+ * @Author: 邓太阳 
+ * @Date: 2019-05-13 18:14
+ */ 
 @Aspect
 @Component
 public class DataSourceAdvice {

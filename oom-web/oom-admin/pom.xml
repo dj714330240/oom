@@ -46,7 +46,13 @@
 			<version>2.1.1.RELEASE</version>
 			<scope>compile</scope>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>com.coe</groupId>
+            <artifactId>oom-service-user-provider</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
 	<dependencyManagement>
 		<dependencies>

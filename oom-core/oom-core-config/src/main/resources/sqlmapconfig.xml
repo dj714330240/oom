@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true" />
+		<!-- <setting name="logImpl" value="SLF4J" /> -->
+		<setting name="logImpl" value="SLF4J" />
+	</settings>
+	<!-- <typeAliases> -->
+	<!-- <package name="com.coe.oms.*.entity" /> -->
+	<!-- </typeAliases> -->
+
+	<plugins>
+	
+	    <!-- 分页插件 -->
+		<plugin interceptor="org.mybatis.plugin.PagePlugin">
+			<property name="dialect" value="MYSQL" />
+			<property name="pageSqlId"
+				value=".*select.*List.*|.*\.page*|query.*List|.*select.*Page*" />
+		</plugin>
+	
+	   <!-- 数据权限拦截 -->
+		<!--<plugin interceptor="com.coe.oms.common.mybatis.DataPlugin">-->
+			<!--<property name="warehouseId" value="{warehouseId}" />-->
+			<!--<property name="customerId" value="{customerId}" />-->
+			<!--<property name="pageSqlId" value=".*select.*Data.*" />-->
+		<!--</plugin>-->
+	   
+		
+		
+	</plugins>
+
+</configuration>

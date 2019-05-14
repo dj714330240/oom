@@ -34,6 +34,7 @@
 
 
     <properties>
+        <utl.version>3.0.2</utl.version>
         <commons-logging.version>1.2</commons-logging.version>
         <spring-boot.version>2.0.0.RELEASE</spring-boot.version>
         <mm.version>2.4</mm.version>

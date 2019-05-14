@@ -1,0 +1,11 @@
+1，启动顺序oom-register,oom-api-gateway,oom-service-user，oom-admin
+
+2，oom-core目前没做处理，先不管
+
+前置机oom-admin,可以把它看为一个消费者
+
+oom-service-user提供者
+
+oom-service-user-provide抽象接口-暴露userService的方法给消费者使用
+
+

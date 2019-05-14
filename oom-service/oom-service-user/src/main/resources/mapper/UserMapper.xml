@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!-- 指定dao -->
+<mapper namespace="com.coe.oom.user.dao.UserDao">
+    <!--  id指定方法名  parameterType指定参数类型 resultType返回参数类型 #{userName}对应User表里面的字段N要大写不然映射报错   -->
+    <select id="getUserByCode" parameterType="String" resultType="com.coe.oom.ent.user.UserEnt">
+       select cu_user.id as id,
+		cu_user.user_code as userCode,
+		cu_user.cust_code as custCode,
+		cu_user.user_name as userName
+		from cu_user where cu_user.user_code = #{userCode}
+    </select>
+
+
+</mapper>

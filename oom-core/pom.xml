@@ -12,11 +12,13 @@
     <artifactId>oom-core</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>oms-core-config</module>
         <module>oom-core-base</module>
-        <module>oom-core-user</module>
+        <module>oom-core-config</module>
         <module>oom-core-mysql</module>
     </modules>
 
+    <dependencies>
+
+    </dependencies>
 
 </project>

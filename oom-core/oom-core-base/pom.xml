@@ -10,18 +10,6 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>oom-core-base</artifactId>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>6</source>
-                    <target>6</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -41,21 +29,52 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
 
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-beans</artifactId>
-            <version>5.1.6.RELEASE</version>
-            <scope>compile</scope>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpmime</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mybatis.plugin.page</groupId>
+            <artifactId>mybatis-plugin-page</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>5.1.6.RELEASE</version>
-            <scope>compile</scope>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-io</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>javabase64</groupId>
+            <artifactId>javabase64</artifactId>
         </dependency>
 
 
     </dependencies>
+
 
 </project>
