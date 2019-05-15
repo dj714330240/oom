@@ -6,11 +6,11 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /*** 
- * @Description: 配置中心 
+ * @Description: 配置中心
  * @Param:  
  * @return:  
  * @Author: 邓太阳 
- * @Date: 2019-05-15 10:07
+ * @Date: 2019-05-15 10:15
  */ 
 @SpringBootApplication
 @EnableEurekaClient
