@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: oom-api-gateway
+  profiles:
+    active: base
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: oom-core-config
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+application:
+  version: 1.0

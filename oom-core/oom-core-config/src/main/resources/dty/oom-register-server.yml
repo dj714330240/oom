@@ -1,3 +1,5 @@
+spring:
+  profiles: eureka-config
 server:
   port: 8761 #服务注册中心端口号
 eureka:
